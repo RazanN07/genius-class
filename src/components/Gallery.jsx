@@ -6,25 +6,25 @@ export default function Gallery() {
 
   // Daftar 18 Foto Kelas
   const photos = [
-    { id: 1, src: "/kls1.jpeg", title: "Momen Kelas 1" },
-    { id: 2, src: "/kls2.jpeg", title: "Momen Kelas 2" },
-    { id: 3, src: "/kls3.jpeg", title: "Momen Kelas 3" },
-    { id: 4, src: "/kls4.jpeg", title: "Momen Kelas 4" },
-    { id: 5, src: "/kls5.jpeg", title: "Momen Kelas 5" },
-    { id: 6, src: "/kls6.jpeg", title: "Momen Kelas 6" },
-    { id: 7, src: "/kls7.jpeg", title: "Momen Kelas 7" },
-    { id: 8, src: "/kls8.jpeg", title: "Momen Kelas 8" },
-    { id: 9, src: "/kls9.jpeg", title: "Momen Kelas 9" },
-    { id: 10, src: "/kls10.jpeg", title: "Momen Kelas 10" },
-    { id: 11, src: "/kls11.jpeg", title: "Momen Kelas 11" },
-    { id: 12, src: "/kls12.jpeg", title: "Momen Kelas 12" },
-    { id: 13, src: "/kls13.jpeg", title: "Momen Kelas 13" },
-    { id: 14, src: "/kls14.jpeg", title: "Momen Kelas 14" },
-    { id: 15, src: "/kls15.jpeg", title: "Momen Kelas 15" },
-    { id: 16, src: "/kls16.jpeg", title: "Momen Kelas 16" },
-    { id: 17, src: "/kls17.jpeg", title: "Momen Kelas 17" },
-    { id: 18, src: "/kls18.jpeg", title: "Momen Kelas 18" },
-  ];
+  "/kls1.jpeg",
+  "/kls2.jpeg",
+  "/kls3.jpeg",
+  "/kls4.jpeg",
+  "/kls5.jpeg",
+  "/kls6.jpeg",
+  "/kls7.jpeg",
+  "/kls8.jpeg",
+  "/kls9.jpeg",
+  "/kls10.jpeg",
+  "/kls11.jpeg",
+  "/kls12.jpeg",
+  "/kls13.jpeg",
+  "/kls14.jpeg",
+  "/kls15.jpeg",
+  "/kls16.jpeg",
+  "/kls17.jpeg",
+  "/kls18.jpeg",
+];
 
   // Menampilkan 4 foto pertama jika belum diklik, atau seluruh foto jika tombol diklik
   const displayedPhotos = showAll ? photos : photos.slice(0, 4);
