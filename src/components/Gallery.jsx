@@ -6,24 +6,24 @@ export default function Gallery() {
 
   // Daftar 18 Foto Kelas
   const photos = [
-    { id: 1, src: "/kls1.jpeg",  },
-    { id: 2, src: "/kls2.jpeg",  },
-    { id: 3, src: "/kls3.jpeg",  },
-    { id: 4, src: "/kls4.jpeg",  },
-    { id: 5, src: "/kls5.jpeg",  },
-    { id: 6, src: "/kls6.jpeg",  },
-    { id: 7, src: "/kls7.jpeg",  },
-    { id: 8, src: "/kls8.jpeg",  },
-    { id: 9, src: "/kls9.jpeg",  },
-    { id: 10, src: "/kls10.jpeg",  },
-    { id: 11, src: "/kls11.jpeg",  },
-    { id: 12, src: "/kls12.jpeg",  },
-    { id: 13, src: "/kls13.jpeg",  },
-    { id: 14, src: "/kls14.jpeg",  },
-    { id: 15, src: "/kls15.jpeg",  },
-    { id: 16, src: "/kls16.jpeg",  },
-    { id: 17, src: "/kls17.jpeg",  },
-    { id: 18, src: "/kls18.jpeg",  },
+    { id: 1, src: "/kls1.jpeg", title: "Momen Kelas 1" },
+    { id: 2, src: "/kls2.jpeg", title: "Momen Kelas 2" },
+    { id: 3, src: "/kls3.jpeg", title: "Momen Kelas 3" },
+    { id: 4, src: "/kls4.jpeg", title: "Momen Kelas 4" },
+    { id: 5, src: "/kls5.jpeg", title: "Momen Kelas 5" },
+    { id: 6, src: "/kls6.jpeg", title: "Momen Kelas 6" },
+    { id: 7, src: "/kls7.jpeg", title: "Momen Kelas 7" },
+    { id: 8, src: "/kls8.jpeg", title: "Momen Kelas 8" },
+    { id: 9, src: "/kls9.jpeg", title: "Momen Kelas 9" },
+    { id: 10, src: "/kls10.jpeg", title: "Momen Kelas 10" },
+    { id: 11, src: "/kls11.jpeg", title: "Momen Kelas 11" },
+    { id: 12, src: "/kls12.jpeg", title: "Momen Kelas 12" },
+    { id: 13, src: "/kls13.jpeg", title: "Momen Kelas 13" },
+    { id: 14, src: "/kls14.jpeg", title: "Momen Kelas 14" },
+    { id: 15, src: "/kls15.jpeg", title: "Momen Kelas 15" },
+    { id: 16, src: "/kls16.jpeg", title: "Momen Kelas 16" },
+    { id: 17, src: "/kls17.jpeg", title: "Momen Kelas 17" },
+    { id: 18, src: "/kls18.jpeg", title: "Momen Kelas 18" },
   ];
 
   // Menampilkan 4 foto pertama jika belum diklik, atau seluruh foto jika tombol diklik
@@ -51,16 +51,16 @@ export default function Gallery() {
             <div
               key={photo.id}
               onClick={() => setSelectedImage(photo.src)}
-              className="group relative h-64 rounded-2xl overflow-hidden border border-stone-800 bg-stone-900 cursor-pointer transition-all duration-500 hover:border-amber-500/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-500/10"
+              className="group relative h-64 rounded-2xl overflow-hidden border border-stone-800 bg-stone-900 cursor-pointer transition-all duration-300 hover:border-amber-500/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-amber-500/10 active:scale-95 active:border-amber-500 select-none"
             >
               <img
                 src={photo.src}
                 alt={photo.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-active:scale-105"
               />
               
-              {/* Overlay Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+              {/* Overlay Hover & Touch */}
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
                 <h3 className="text-white font-bold text-lg">
                   {photo.title}
                 </h3>
@@ -73,7 +73,7 @@ export default function Gallery() {
         <div className="mt-12 text-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-8 py-3.5 bg-stone-900 border border-stone-700 hover:border-amber-500/60 text-amber-400 hover:text-amber-300 font-semibold rounded-xl shadow-lg hover:shadow-amber-500/10 transition-all duration-300 active:scale-95"
+            className="px-8 py-3.5 bg-stone-900 border border-stone-700 hover:border-amber-500/60 text-amber-400 hover:text-amber-300 font-semibold rounded-xl shadow-lg hover:shadow-amber-500/10 transition-all duration-300 active:scale-95 active:bg-amber-500/10 active:border-amber-500"
           >
             {showAll ? "Sembunyikan Foto" : `Lihat Semua Foto (${photos.length})`}
           </button>
@@ -90,7 +90,7 @@ export default function Gallery() {
           <div className="relative max-w-4xl w-full max-h-[90vh] flex justify-center">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-12 right-0 text-stone-400 hover:text-white text-3xl font-bold transition-colors"
+              className="absolute -top-12 right-0 text-stone-400 hover:text-white active:scale-90 text-3xl font-bold transition-transform p-2"
             >
               ✕
             </button>

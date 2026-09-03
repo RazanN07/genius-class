@@ -10,7 +10,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-stone-950 text-stone-400 border-t border-stone-800/80 relative overflow-hidden">
+    <footer className="bg-stone-950 text-stone-400 border-t border-stone-800/80 relative overflow-hidden select-none">
       {/* Pendaran Cahaya Halus di Latar Belakang */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[150px] bg-amber-500/5 blur-[100px] pointer-events-none rounded-full" />
 
@@ -19,8 +19,8 @@ export default function Footer() {
           
           {/* Sisi Kiri: Branding & Tagline */}
           <div className="space-y-2">
-            <div className="flex items-center justify-center md:justify-start gap-2">
-              <div className="w-7 h-7 rounded-lg bg-amber-500 flex items-center justify-center text-stone-950 font-extrabold text-xs shadow-md shadow-amber-500/20">
+            <div className="flex items-center justify-center md:justify-start gap-2 active:scale-95 transition-transform duration-200 cursor-pointer w-fit mx-auto md:mx-0">
+              <div className="w-7 h-7 rounded-lg bg-amber-500 flex items-center justify-center text-stone-950 font-extrabold text-xs shadow-md shadow-amber-500/20 active:bg-amber-400">
                 GC
               </div>
               <span className="font-bold text-lg text-white tracking-tight">
@@ -37,21 +37,21 @@ export default function Footer() {
             <a
               href="#home"
               onClick={(e) => handleScroll(e, "home")}
-              className="hover:text-amber-400 transition-colors cursor-pointer"
+              className="hover:text-amber-400 active:text-amber-400 active:scale-95 transition-all cursor-pointer py-1 px-2 rounded-md active:bg-stone-900"
             >
               Beranda
             </a>
             <a
               href="#about"
               onClick={(e) => handleScroll(e, "about")}
-              className="hover:text-amber-400 transition-colors cursor-pointer"
+              className="hover:text-amber-400 active:text-amber-400 active:scale-95 transition-all cursor-pointer py-1 px-2 rounded-md active:bg-stone-900"
             >
               Tentang Kami
             </a>
             <a
               href="#gallery"
               onClick={(e) => handleScroll(e, "gallery")}
-              className="hover:text-amber-400 transition-colors cursor-pointer"
+              className="hover:text-amber-400 active:text-amber-400 active:scale-95 transition-all cursor-pointer py-1 px-2 rounded-md active:bg-stone-900"
             >
               Galeri
             </a>
@@ -66,7 +66,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone-400 font-light">
           <p>© {currentYear} Genius Class. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
-            Dibuat dengan <span className="text-amber-500">☕</span> untuk kebersamaan Genius Class
+            Dibuat dengan <span className="text-amber-500 active:scale-125 transition-transform inline-block cursor-pointer">☕</span> untuk kebersamaan Genius Class
           </p>
         </div>
 
