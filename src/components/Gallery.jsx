@@ -6,25 +6,25 @@ export default function Gallery() {
 
   // Daftar 18 Foto Kelas
   const photos = [
-  "/kls1.jpeg",
-  "/kls2.jpeg",
-  "/kls3.jpeg",
-  "/kls4.jpeg",
-  "/kls5.jpeg",
-  "/kls6.jpeg",
-  "/kls7.jpeg",
-  "/kls8.jpeg",
-  "/kls9.jpeg",
-  "/kls10.jpeg",
-  "/kls11.jpeg",
-  "/kls12.jpeg",
-  "/kls13.jpeg",
-  "/kls14.jpeg",
-  "/kls15.jpeg",
-  "/kls16.jpeg",
-  "/kls17.jpeg",
-  "/kls18.jpeg",
-];
+    { id: 1, src: "/kls1.jpeg", },
+    { id: 2, src: "/kls2.jpeg",  },
+    { id: 3, src: "/kls3.jpeg",  },
+    { id: 4, src: "/kls4.jpeg",  },
+    { id: 5, src: "/kls5.jpeg",  },
+    { id: 6, src: "/kls6.jpeg",  },
+    { id: 7, src: "/kls7.jpeg",  },
+    { id: 8, src: "/kls8.jpeg",  },
+    { id: 9, src: "/kls9.jpeg",  },
+    { id: 10, src: "/kls10.jpeg", },
+    { id: 11, src: "/kls11.jpeg", },
+    { id: 12, src: "/kls12.jpeg", },
+    { id: 13, src: "/kls13.jpeg", },
+    { id: 14, src: "/kls14.jpeg", },
+    { id: 15, src: "/kls15.jpeg", },
+    { id: 16, src: "/kls16.jpeg", },
+    { id: 17, src: "/kls17.jpeg", },
+    { id: 18, src: "/kls18.jpeg", },
+  ];
 
   // Menampilkan 4 foto pertama jika belum diklik, atau seluruh foto jika tombol diklik
   const displayedPhotos = showAll ? photos : photos.slice(0, 4);

@@ -31,23 +31,35 @@ export default function Hero() {
       />
 
       {/* Layer Overlay Opacity Warm */}
-      <div className="absolute inset-0 bg-stone-900/50 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-stone-900/60 backdrop-blur-[2px]" />
       
       {/* Gradasi Halus Bagian Bawah */}
-      <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent" />
 
-      {/* Wrapper Konten (Naik Sedikit ke Atas) */}
+      {/* Wrapper Konten */}
       <div className="relative z-10 w-full flex flex-col items-center gap-3 md:gap-5 -mt-6 md:-mt-10">
         
-        {/* Teks Melengkung */}
+        {/* Teks Melengkung Menyala (Glow Neon Effect) */}
         <div className="w-full max-w-xl px-4 flex justify-center active:scale-95 transition-transform duration-200 cursor-pointer">
-          <svg viewBox="0 0 500 130" className="w-full h-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.9)]">
+          <svg 
+            viewBox="0 0 500 140" 
+            className="w-full h-auto filter drop-shadow-[0_0_12px_rgba(251,191,36,0.9)] drop-shadow-[0_0_25px_rgba(245,158,11,0.6)] drop-shadow-[0_0_40px_rgba(255,255,255,0.8)]"
+          >
+            {/* Definisikan Warna Gradasi Emas/Amber */}
+            <defs>
+              <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#ffffff" />
+                <stop offset="50%" stopColor="#fef08a" />
+                <stop offset="100%" stopColor="#f59e0b" />
+              </linearGradient>
+            </defs>
+
             <path
               id="curve"
-              d="M 50 110 Q 250 20 450 110"
+              d="M 50 115 Q 250 25 450 115"
               fill="transparent"
             />
-            <text className="fill-white font-extrabold text-4xl sm:text-5xl tracking-widest uppercase">
+            <text className="font-black text-4xl sm:text-5xl tracking-widest uppercase" fill="url(#text-gradient)">
               <textPath href="#curve" startOffset="50%" textAnchor="middle">
                 Genius Class
               </textPath>
@@ -55,7 +67,7 @@ export default function Hero() {
           </svg>
         </div>
 
-        {/* Slider Foto Berjalan (Tepat di Bawah Tulisan) */}
+        {/* Slider Foto Berjalan */}
         <div className="w-full overflow-hidden flex group">
           <div className="flex min-w-full shrink-0 space-x-4 animate-marquee-loop pr-4">
             {photos.concat(photos).map((photo, index) => (
